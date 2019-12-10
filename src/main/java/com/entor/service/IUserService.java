@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.service.IService;
  * </p>
  *
  * @author LiChaoHua
- * @since 2019-10-25
+ * @since 2019-12-10
  */
 public interface IUserService extends IService<User> {
 	
@@ -19,9 +19,4 @@ public interface IUserService extends IService<User> {
 	 * @return
 	 */
 	public User queryUserByUsername(String username);
-	/**
-	 * 添加用户
-	 * @param user
-	 */
-	public void addUser(User user);
 }

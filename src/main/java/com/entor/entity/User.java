@@ -13,7 +13,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author LiChaoHua
- * @since 2019-10-25
+ * @since 2019-12-10
  */
 public class User extends Model<User> {
 
@@ -40,6 +40,10 @@ public class User extends Model<User> {
      * 用户名
      */
 	private String user;
+    /**
+     * 0 不在线， 1 在线
+     */
+	private Integer online;
 
 
 	public Integer getId() {
@@ -87,6 +91,15 @@ public class User extends Model<User> {
 		return this;
 	}
 
+	public Integer getOnline() {
+		return online;
+	}
+
+	public User setOnline(Integer online) {
+		this.online = online;
+		return this;
+	}
+
 	public static final String ID = "id";
 
 	public static final String USERNAME = "username";
@@ -96,6 +109,8 @@ public class User extends Model<User> {
 	public static final String RID = "rid";
 
 	public static final String USER = "user";
+
+	public static final String ONLINE = "online";
 
 	@Override
 	protected Serializable pkVal() {
@@ -110,6 +125,7 @@ public class User extends Model<User> {
 			", password=" + password +
 			", rid=" + rid +
 			", user=" + user +
+			", online=" + online +
 			"}";
 	}
 }

@@ -4,11 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>后台管理</title>
 </head>
 <body>
 
-这是我的教室
+<div>
+	<li>欢迎：${username}</li>
+	<li><a href="logout">注销</a></li>
+</div>
+
 
 </body>
 </html>

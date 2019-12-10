@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author LiChaoHua
- * @since 2019-10-25
+ * @since 2019-12-10
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
@@ -35,14 +35,5 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 		wrapper.eq(User.USERNAME, username);
 		return selectOne(wrapper);
 	}
-	/**
-	 * 添加用户
-	 * @param user
-	 */
-	@Override
-	public void addUser(User user) {
-		userMapper.insert(user);
-	}
-	
 	
 }

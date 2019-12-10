@@ -15,7 +15,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author LiChaoHua
- * @since 2019-10-25
+ * @since 2019-12-10
  */
 @TableName("user_details")
 public class UserDetails extends Model<UserDetails> {
@@ -40,10 +40,6 @@ public class UserDetails extends Model<UserDetails> {
      * 退出时间
      */
 	private Date exitTime;
-    /**
-     * 0不在线，1在线
-     */
-	private Integer online;
     /**
      * 登录教室
      */
@@ -96,15 +92,6 @@ public class UserDetails extends Model<UserDetails> {
 		return this;
 	}
 
-	public Integer getOnline() {
-		return online;
-	}
-
-	public UserDetails setOnline(Integer online) {
-		this.online = online;
-		return this;
-	}
-
 	public Integer getClassRoomID() {
 		return classRoomID;
 	}
@@ -133,8 +120,6 @@ public class UserDetails extends Model<UserDetails> {
 
 	public static final String EXITTIME = "exitTime";
 
-	public static final String ONLINE = "online";
-
 	public static final String CLASSROOMID = "classRoomID";
 
 	public static final String TEACHERID = "teacherID";
@@ -152,7 +137,6 @@ public class UserDetails extends Model<UserDetails> {
 			", createTime=" + createTime +
 			", loginTime=" + loginTime +
 			", exitTime=" + exitTime +
-			", online=" + online +
 			", classRoomID=" + classRoomID +
 			", teacherID=" + teacherID +
 			"}";

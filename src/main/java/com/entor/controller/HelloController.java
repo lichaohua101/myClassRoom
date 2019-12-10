@@ -18,32 +18,6 @@ public class HelloController {
 	public class indexController{
 	    @RequestMapping("example")
 	    public String a(Model model){
-//	        return "example";//返回classpath:templates/example.html页面(thymeleaf)
-	    	model.addAttribute("content","我是来自后台的");
-			model.addAttribute("name","张三");
-			model.addAttribute("username","zhangsan");
-			model.addAttribute("password","123456");
-			//传递一个对象
-			User user = new User();
-			user.setId(1);
-			user.setUsername("李四");
-			user.setUsername("lisi");
-			user.setPassword("123456");
-			model.addAttribute("user",user);
-			//传递一个集合
-			List<User> list = new ArrayList<User>();
-			for (int i = 1; i <= 10; i++) {
-				User user1 = new User();
-				user1.setId(i);
-				user1.setUsername("张三"+i);
-				user1.setUsername("zhangsan"+i);
-				user1.setPassword("123456");
-				list.add(user1);
-			}
-			model.addAttribute("list",list);
-			//测试多条件
-			model.addAttribute("score",96);
-			model.addAttribute("now",new Date());
 			return "example";
 	    }
 	    @RequestMapping("index")

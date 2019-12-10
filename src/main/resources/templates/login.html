@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MM校园登录</title>
+</head>
+<body>
+
+<div>
+	<form action="loginCheck" method="post" class="layui-form" >
+		 <input name="username" placeholder="用户名"  type="text" lay-verify="required" class="layui-input" >
+         <input name="password" lay-verify="required" placeholder="密码"  type="password" class="layui-input">
+         <input class="loginin" value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit">
+         <div>
+         	<table>
+         		<tr>
+         			<td><a href="userRegister"><span style="color: black;" class="btn btn-danger  btn-lg">学生注册</span></a></td>
+         			<td><a href="AdminRegister"><span style="color: black" class="btn btn-danger  btn-lg">教师注册</span></a></td>
+         		</tr>
+         	</table>
+         </div>
+	</form>
+</div>
+
+
+</body>
+</html>

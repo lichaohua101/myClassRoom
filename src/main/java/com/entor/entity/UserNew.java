@@ -14,7 +14,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author LiChaoHua
- * @since 2019-10-25
+ * @since 2019-12-10
  */
 @TableName("user_new")
 public class UserNew extends Model<UserNew> {
